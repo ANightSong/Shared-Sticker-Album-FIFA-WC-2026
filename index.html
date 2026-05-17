@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link
+  rel="manifest"
+  href="manifest.json"
+/>
+  <meta
+  name="theme-color"
+  content="#111111"
+/>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbuns Compartilhados</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <div id="homeScreen" class="screen">
+
+    <div id="topBar">
+
+  <h1>Álbuns Compartilhados</h1>
+
+  <div id="topProfile">
+
+    <img
+      id="topProfileImage"
+      src=""
+    >
+    
+    <span id="topProfileName">
+
+      Colecionador
+
+    </span>
+    
+    <input
+  type="file"
+  id="profileImageInput"
+  accept="image/*"
+>
+
+  </div>
+
+</div>
+
+    <div id="emptyMessage">
+      <button id="joinFirstAlbum">
+        Participar de um Álbum
+      </button>
+    </div>
+
+    <div id="albumsList" class="albums-list"></div>
+
+    <button id="floatingButton">+</button>
+
+    <div id="menu" class="menu-popup">
+
+      <button id="createAlbumOption">
+        Criar álbum compartilhado
+      </button>
+
+      <button id="joinAlbumOption">
+        Participar de um álbum
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- TELA DO ÁLBUM -->
+  <div id="albumScreen" class="screen" style="display:none;">
+
+    <button id="backButton">
+      ← Voltar
+    </button>
+    
+    <div id="albumParticipants"></div>
+
+    <h1 id="selectedAlbumName"></h1>
+    <div id="albumStats"></div>
+    
+    <div id="filters">
+
+  <button class="filter-button active"
+  data-filter="all">
+    Todas
+  </button>
+
+  <button class="filter-button"
+  data-filter="obtained">
+    Obtidas
+  </button>
+
+  <button class="filter-button"
+  data-filter="missing">
+    Faltando
+  </button>
+
+  <button class="filter-button"
+  data-filter="repeated">
+    Repetidas
+  </button>
+      
+      <button id="toggleSectionsButton">
+
+  ▲ Esconder tudo
+
+</button>
+
+</div>
+    
+    <div id="searchArea">
+
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Pesquisar figurinha (ex: BRA 07)"
+  >
+
+  <button id="searchButton">
+    Buscar
+  </button>
+
+</div>
+    
+    <div id="stickers"></div>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+
+   <!-- TELA DO PERFIL -->
+  <div
+  id="profileModal"
+  class="profile-modal"
+  style="display:none;"
+>
+
+  <div class="profile-content">
+
+    <h2>Perfil</h2>
+
+    <input
+      type="text"
+      id="profileNameInput"
+      placeholder="Seu nome"
+    >
+
+    <input
+      type="text"
+      id="profilePhotoInput"
+      placeholder="URL da foto"
+    >
+
+    <img
+  id="profilePreview"
+  src=""
+>
+
+    <div id="profileStats"></div>
+
+    <button id="saveProfileButton">
+      Salvar
+    </button>
+
+    <button id="closeProfileButton">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+  
+  <div id="participantsModal">
+
+  <button id="prevParticipant">
+    ◀
+  </button>
+
+  <div id="participantCard">
+
+    <img id="participantPhoto">
+
+    <h2 id="participantName"></h2>
+
+  </div>
+
+  <button id="nextParticipant">
+    ▶
+  </button>
+
+</div>
+  
+</body>
+</html>
