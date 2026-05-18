@@ -366,6 +366,11 @@ document.getElementById(
   "nextParticipant"
 );
 
+const themeToggle =
+document.getElementById(
+  "themeToggle"
+);
+
 let albums = [];
 let currentFilter = "all";
 let sectionsExpanded = true;
@@ -599,6 +604,55 @@ closeProfileButton.addEventListener(
 
   }
 );
+
+themeToggle.addEventListener(
+  "change",
+  () => {
+
+    if(themeToggle.checked){
+
+      applyTheme("dark");
+
+    }else{
+
+      applyTheme("light");
+
+    }
+
+  }
+);
+
+function applyTheme(theme){
+
+  document.body.classList.remove(
+    "light-theme",
+    "dark-theme"
+  );
+
+  document.body.classList.add(
+    `${theme}-theme`
+  );
+
+  localStorage.setItem(
+    "appTheme",
+    theme
+  );
+
+}
+
+function loadTheme(){
+
+  const savedTheme =
+  localStorage.getItem(
+    "appTheme"
+  ) || "light";
+
+  themeToggle.checked =
+savedTheme === "dark";
+
+  applyTheme(savedTheme);
+
+}
 
 function openParticipantsCarousel(
   participants,
@@ -1622,3 +1676,4 @@ if("serviceWorker" in navigator){
   });
 
 }
+loadTheme();

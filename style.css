@@ -1,8 +1,14 @@
 body{
+
   font-family: Arial;
-  background: #f0f0f0;
+
   margin: 0;
   padding: 20px;
+
+  transition:
+  background 0.3s,
+  color 0.3s;
+
 }
 
 .container{
@@ -726,5 +732,226 @@ body{
   object-fit: cover;
 
   margin-bottom: 15px;
+
+}
+
+.light-theme{
+
+  background: #f2f2f2;
+  color: #111;
+
+}
+
+.dark-theme{
+
+  background: #121212;
+  color: white;
+
+}
+
+.light-theme .album-card{
+
+  background: white;
+  color: black;
+
+}
+
+.dark-theme .album-card{
+
+  background: #1e1e1e;
+  color: white;
+
+}
+
+.dark-theme .top-bar{
+
+  background: #181818;
+
+}
+
+.light-theme .top-bar{
+
+  background: white;
+
+}
+
+.dark-theme button{
+
+  background: #2a2a2a;
+  color: white;
+
+}
+
+.dark-theme .section{
+
+  background: #1e1e1e;
+
+}
+
+.dark-theme .sticker{
+
+  background: #2a2a2a;
+  color: white;
+
+}
+
+.dark-theme .floating-menu{
+
+  background: #1f1f1f;
+
+}
+
+.dark-theme input,
+.dark-theme select{
+
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+
+}
+
+.dark-theme .profile-content{
+
+  background: #1e1e1e;
+  color: white;
+
+}
+
+.dark-theme .profile-content input,
+.dark-theme .profile-content select{
+
+  background: #2a2a2a;
+  color: white;
+
+  border: 1px solid #444;
+
+}
+
+.dark-theme .profile-content button{
+
+  background: #333;
+  color: white;
+
+}
+
+.dark-theme #topProfileName{
+
+  color: white;
+
+}
+
+.dark-theme .album-stats-preview{
+
+  color: #bbb;
+
+}
+
+.dark-theme #albumStats{
+
+  color: #bbb;
+
+}
+
+.dark-theme .section-header{
+
+  background: #333;
+
+}
+
+.dark-theme .progress-bar{
+
+  background: #333;
+
+}
+
+.dark-theme #floatingButton{
+
+  background: #333;
+
+}
+
+.theme-switch-area{
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 10px;
+
+}
+
+.switch{
+
+  position: relative;
+
+  display: inline-block;
+
+  width: 60px;
+
+  height: 34px;
+
+}
+
+.switch input{
+
+  opacity: 0;
+
+  width: 0;
+
+  height: 0;
+
+}
+
+.slider{
+
+  position: absolute;
+
+  cursor: pointer;
+
+  inset: 0;
+
+  background: #ccc;
+
+  transition: 0.3s;
+
+  border-radius: 999px;
+
+}
+
+.slider:before{
+
+  content: "";
+
+  position: absolute;
+
+  width: 26px;
+
+  height: 26px;
+
+  left: 4px;
+
+  bottom: 4px;
+
+  background: white;
+
+  transition: 0.3s;
+
+  border-radius: 50%;
+
+}
+
+.switch input:checked + .slider{
+
+  background: #4caf50;
+
+}
+
+.switch input:checked + .slider:before{
+
+  transform: translateX(26px);
 
 }
